@@ -1,0 +1,19 @@
+.search-field{
+    border-radius: 30px;
+    box-shadow: inset 0 0 15px 1px #dddedf;
+}
+.search-btn{
+    border-radius: 25px;
+    border: 1px solid rgb(49, 199, 245);
+    color: rgb(49, 199, 245);
+}
+img{
+    margin-left: 15px;
+    max-height: 40px;
+    border: 1px solid gray;
+    display: inline;
+    border-radius: 30px;
+}
+.dropdown-toggle, .dropdown-item{
+    cursor: pointer;
+}

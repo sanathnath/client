@@ -1,0 +1,15 @@
+.form-left-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(63, 197, 231);
+}
+
+.form-left-part h3{
+    transform: rotate(-90deg);
+    color: white;
+}
+.auth-container{
+    height: 100vh;
+    background-color: rgb(241, 240, 237);
+}

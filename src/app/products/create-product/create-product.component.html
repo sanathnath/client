@@ -1,0 +1,64 @@
+<app-nav></app-nav>
+<div class="container mt-3 mb-3">
+  <div class="d-flex align-items-center justify-content-center">
+    <div class="card p-5 shadow-lg border-white w-50">
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="addProduct()"
+        autocomplete="off"
+      >
+        <div class="pt-4 gap-5 d-flex">
+          <app-text-input
+            [formControl]="$any(registerForm.controls['title'])"
+            [label]="'Product Title'"
+          ></app-text-input>
+          <app-text-input
+            [formControl]="$any(registerForm.controls['price'])"
+            [label]="'Price'"
+            [type]="'number'"
+          ></app-text-input>
+        </div>
+        <div class="pt-3 gap-5 d-flex">
+          <app-text-input
+            [formControl]="$any(registerForm.controls['discount'])"
+            [label]="'Discount'"
+            [type]="'number'"
+          ></app-text-input>
+          <app-text-input
+            [formControl]="$any(registerForm.controls['quantity'])"
+            [label]="'Quantity'"
+            [type]="'number'"
+          ></app-text-input>
+        </div>
+        <div class="pt-3 gap-5 d-flex">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            [formControl]="$any(registerForm.controls['category'])"
+          >
+            <option selected value="">Category</option>
+            <option value="mobile">Mobile</option>
+            <option value="tv">TV</option>
+            <option value="laptop">Laptop</option>
+          </select>
+        </div>
+        <div>
+          <app-photo-uploader (images)="getImages($event)"></app-photo-uploader>
+        </div>
+        <div>
+          <textarea
+            class="form-control"
+            placeholder="Description"
+            rows="4"
+            [formControl]="$any(registerForm.controls['description'])"
+          ></textarea>
+        </div>
+        <div class="pt-3">
+          <button class="btn btn-success" style="width: 100%" type="submit">
+            Create
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

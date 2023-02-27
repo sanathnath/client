@@ -1,0 +1,21 @@
+<form [formGroup]="registerForm" (ngSubmit)="login()" autocomplete="off">
+    <app-text-input
+      [formControl]="$any(registerForm.controls['username'])"
+      [label]="'Username'"
+    ></app-text-input>
+    <app-text-input
+      [formControl]="$any(registerForm.controls['password'])"
+      [label]="'password'"
+      [type]="'password'"
+    ></app-text-input>
+    <div >
+      <button type="submit"  class="btn btn-primary login-btn">Login</button>
+    </div>
+    <div class="text-center">
+      <p>or</p>
+    </div>
+    <div>
+      <p class="text-primary" (click)="switchToLogin()">create new account</p>
+    </div>
+  </form>
+  

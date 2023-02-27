@@ -1,0 +1,14 @@
+<div
+  class="d-flex justify-content-center align-items-center mt--10 auth-container"
+  (click)="onParentClick($event)"
+>
+  <div class="d-flex flex-row shadow-lg mb-5 bg-white rounded" style="width: 40%;" (click)="onFormClick($event)">
+    <div class="w-25 form-left-part">
+        <h3>{{!isLoggin? "Sign up" : "Login"}}</h3>
+    </div>
+    <div class="mt-5" style="width: 75%; padding: 50px 80px;">
+        <app-login (toggleForm)="selectForm($event)" *ngIf="isLoggin"></app-login>
+        <app-register (toggleForm)="selectForm($event)" *ngIf="!isLoggin"></app-register>
+    </div>
+  </div>
+</div>

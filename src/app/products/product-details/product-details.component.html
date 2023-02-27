@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+<div *ngIf="product" class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- <img src="{{product.thumbnail}}" alt="Product Image" class="img-fluid"> -->
+        <carousel [interval]="0">
+          <slide *ngFor="let imgurl of product.photos">
+            <img src="{{imgurl.url}}" alt="first slide" style="display: block; width: 100%;">
+          </slide>
+        </carousel>
+      </div>
+      <div class="col-md-6">
+        <h1>{{product.title}}</h1>
+        <h4>Price: {{product.price}}</h4>
+        <p>{{product.description}}</p>
+        <form>
+          <div class="form-group p-3">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" min="1" max="10" value="1">
+          </div>
+          <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,11 @@
+<app-nav></app-nav>
+<div
+  class="container d-grid mt-5"
+  style="height: 100vh; grid-template-columns: repeat(4, 23%); gap: 1rem"
+  
+>
+<div *ngFor="let product of products">
+  <app-product-card [product]="product"></app-product-card>
+</div>
+</div>
+<!-- grid-template-columns: repeat(4, auto); gap: 1rem; -->

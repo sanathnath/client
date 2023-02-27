@@ -1,0 +1,10 @@
+<div class="card border-white shadow mb-3 prod-card" routerLink="product-detail/{{product.id}}">
+    <img src="{{product.thumbnail}}" class="card-img-top" alt="Product Image">
+    <div class="card-body mt-3">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">{{product.description}}</p>
+      <p class="card-text"><strong>Price:</strong> {{product.price}} <s>20.00</s></p>
+      <a href="#" class="btn add-cart-btn">Add to Cart</a>
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+<form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
+  <app-text-input
+    [formControl]="$any(registerForm.controls['username'])"
+    [label]="'Username'"
+  ></app-text-input>
+  <app-text-input
+    [formControl]="$any(registerForm.controls['password'])"
+    [label]="'password'"
+    [type]="'password'"
+  ></app-text-input>
+  <app-text-input
+    [formControl]="$any(registerForm.controls['confirmPassword'])"
+    [label]="'confirmPassword'"
+    [type]="'password'"
+  ></app-text-input>
+  <div>
+    <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary register-btn">Register</button>
+  </div>
+  <div class="text-center">
+    <p>or</p>
+  </div>
+  <div>
+    <p class="text-primary" (click)="switchToLogin()">already have an account?</p>
+  </div>
+</form>
